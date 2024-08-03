@@ -15,6 +15,11 @@ This project involves migrating a multi-tier web application stack (vProfile) fr
 3. [Validation and Summary](#validation-and-summary)
 4. [Future Improvements](#future-improvements)
 
+## Architecture Diagram
+
+![Architecture Diagram](https://github.com/shivamBhavsar-cmd/AWS-Lift-and-Shift-Project/issues/1#issue-2446530994)
+
+
 ## Prerequisites
 
 - An AWS account
@@ -38,6 +43,8 @@ This project involves migrating a multi-tier web application stack (vProfile) fr
      8. Review and launch the instance.
      9. Select or create a key pair (e.g., `vprofile-prod-key`).
      10. Click `Launch`.
+
+   ![EC2 Instances](https://private-user-images.githubusercontent.com/63534308/354835049-74ddd615-3f1a-40fa-a737-e5d08682fc43.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjI3MTA3OTAsIm5iZiI6MTcyMjcxMDQ5MCwicGF0aCI6Ii82MzUzNDMwOC8zNTQ4MzUwNDktNzRkZGQ2MTUtM2YxYS00MGZhLWE3MzctZTVkMDg2ODJmYzQzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA4MDMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwODAzVDE4NDEzMFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTFiMTQ2Y2VhZDMwMzgxMWZiNzI5NmIxNzVhZjNlN2E5ODJhNDYwNWUyNTU1ODg5MzAwNDA0N2FmYjEwZmRhN2QmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.mq0vsTikVcXN5RKXncbJmY-gZTHB5cHhboPzio2Alpg)
 
 2. **Connect to EC2 Instance via SSH**:
    - **Command**:
