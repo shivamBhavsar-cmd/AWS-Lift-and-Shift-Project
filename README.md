@@ -17,7 +17,7 @@ This project involves migrating a multi-tier web application stack (vProfile) fr
 
 ## Architecture Diagram
 
-![Architecture Diagram](https://github.com/shivamBhavsar-cmd/AWS-Lift-and-Shift-Project/issues/1#issue-2446530994)
+![Architecture Diagram](https://github.com/shivamBhavsar-cmd/AWS-Lift-and-Shift-Project/blob/main/images/Screenshot%20(34).png)
 
 
 ## Prerequisites
@@ -25,7 +25,7 @@ This project involves migrating a multi-tier web application stack (vProfile) fr
 - An AWS account
 - Basic knowledge of AWS services
 - AWS CLI installed and configured
-- SSH client (e.g., PuTTY for Windows or Terminal for macOS/Linux)
+- SSH client (e.g., Git Bash (used git bash and recommended) , or PuTTY for Windows or Terminal for macOS/Linux)
 
 ## Project Setup
 
@@ -44,7 +44,7 @@ This project involves migrating a multi-tier web application stack (vProfile) fr
      9. Select or create a key pair (e.g., `vprofile-prod-key`).
      10. Click `Launch`.
 
-   ![EC2 Instances](https://private-user-images.githubusercontent.com/63534308/354835049-74ddd615-3f1a-40fa-a737-e5d08682fc43.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjI3MTA3OTAsIm5iZiI6MTcyMjcxMDQ5MCwicGF0aCI6Ii82MzUzNDMwOC8zNTQ4MzUwNDktNzRkZGQ2MTUtM2YxYS00MGZhLWE3MzctZTVkMDg2ODJmYzQzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA4MDMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwODAzVDE4NDEzMFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTFiMTQ2Y2VhZDMwMzgxMWZiNzI5NmIxNzVhZjNlN2E5ODJhNDYwNWUyNTU1ODg5MzAwNDA0N2FmYjEwZmRhN2QmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.mq0vsTikVcXN5RKXncbJmY-gZTHB5cHhboPzio2Alpg)
+   ![EC2 Instances](https://github.com/shivamBhavsar-cmd/AWS-Lift-and-Shift-Project/blob/main/images/Instances.png)
 
 2. **Connect to EC2 Instance via SSH**:
    - **Command**:
@@ -110,7 +110,8 @@ This project involves migrating a multi-tier web application stack (vProfile) fr
      - **Explanation**:
        - `aws s3 mb`: Creates a new bucket.
        - `s3://<bucket-name>`: Specifies the bucket name.
-
+![S3](https://github.com/shivamBhavsar-cmd/AWS-Lift-and-Shift-Project/blob/main/images/s3.png)
+![S3](https://github.com/shivamBhavsar-cmd/AWS-Lift-and-Shift-Project/blob/main/images/s3%201.png))
    - **Create IAM User**:
      - **Command**:
        ```bash
@@ -161,14 +162,15 @@ This project involves migrating a multi-tier web application stack (vProfile) fr
      3. Choose `Application Load Balancer`.
      4. Configure listeners (HTTP/HTTPS) and security groups.
      5. Define target groups and health checks.
-
+        ![Load Balancer](https://github.com/shivamBhavsar-cmd/AWS-Lift-and-Shift-Project/blob/main/images/load%20balancer.png)
+        
 2. **Configure Route 53**:
    - **Create Private DNS Zone**:
      - **Via AWS Console**:
        1. Open the Route 53 Management Console.
        2. Click `Create Hosted Zone`.
        3. Choose `Private Hosted Zone` and specify domain details.
-
+![Route 53](https://github.com/shivamBhavsar-cmd/AWS-Lift-and-Shift-Project/blob/main/images/Route%2053.png)
    - **Add CNAME Record**:
      - **Via AWS Console**:
        1. Navigate to the Hosted Zone.
@@ -209,6 +211,12 @@ This project involves migrating a multi-tier web application stack (vProfile) fr
      3. Specify the name, launch template, VPC, and target group.
      4. Configure health checks, scaling policies, and notifications.
 
+![Security Groups](https://github.com/shivamBhavsar-cmd/AWS-Lift-and-Shift-Project/blob/main/images/security%20group%201.png)
+![Security Groups](https://github.com/shivamBhavsar-cmd/AWS-Lift-and-Shift-Project/blob/main/images/security%20group%201.1.png)
+![Security Groups](https://github.com/shivamBhavsar-cmd/AWS-Lift-and-Shift-Project/blob/main/images/security%20group%202.png)
+![Security Groups](https://github.com/shivamBhavsar-cmd/AWS-Lift-and-Shift-Project/blob/main/images/security%20group%202.2.png)
+![Security Groups](https://github.com/shivamBhavsar-cmd/AWS-Lift-and-Shift-Project/blob/main/images/security%20group%203.png)
+![Security Groups](https://github.com/shivamBhavsar-cmd/AWS-Lift-and-Shift-Project/blob/main/images/security%20group%203.3.png)
 4. **Validate Auto Scaling**:
    - **Command**:
      ```bash
