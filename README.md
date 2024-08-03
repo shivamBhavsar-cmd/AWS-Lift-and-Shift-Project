@@ -1,11 +1,4 @@
-# AWS-Lift-and-Shift-Project-vProfile
-This project involves migrating a multi-tier web application stack (vProfile) from a local data center to the AWS cloud using a lift-and-shift strategy. The key AWS services used include EC2 instances, Elastic Load Balancer, Auto Scaling, S3, Route 53, IAM, ACM, and EBS.
-
-Certainly! Here’s an enhanced README.md file with detailed explanations of commands and processes, including SSH and Linux commands.
-
----
-
-# AWS Lift and Shift Project: vProfile
+# AWS Lift and Shift Project 
 
 ## Overview
 
@@ -57,10 +50,16 @@ This project involves migrating a multi-tier web application stack (vProfile) fr
      - `ec2-user@<instance-public-dns>`: The default user and public DNS of the EC2 instance.
 
 3. **Configure Instances**:
-   - **Install Software** (e.g., Tomcat, RabbitMQ, Memcached, MySQL):
+   - **Update Package List**:
      ```bash
      sudo yum update -y
+     ```
+   - **Install Software** (e.g., Tomcat, RabbitMQ, Memcached, MySQL):
+     ```bash
      sudo yum install -y tomcat rabbitmq-server memcached mysql-server
+     ```
+   - **Start and Enable Services**:
+     ```bash
      sudo systemctl start tomcat
      sudo systemctl enable tomcat
      sudo systemctl start rabbitmq-server
@@ -70,11 +69,19 @@ This project involves migrating a multi-tier web application stack (vProfile) fr
      sudo systemctl start mysqld
      sudo systemctl enable mysqld
      ```
+   - **Check Status of Services**:
+     ```bash
+     sudo systemctl status tomcat
+     sudo systemctl status rabbitmq-server
+     sudo systemctl status memcached
+     sudo systemctl status mysqld
+     ```
    - **Explanation**:
      - `sudo yum update -y`: Updates all installed packages to the latest version.
      - `sudo yum install -y <package>`: Installs specified packages.
      - `sudo systemctl start <service>`: Starts the specified service.
      - `sudo systemctl enable <service>`: Enables the service to start on boot.
+     - `sudo systemctl status <service>`: Checks the status of the service.
 
 4. **Verify Security Group Rules**:
    - **Command**:
@@ -167,7 +174,7 @@ This project involves migrating a multi-tier web application stack (vProfile) fr
      curl -I https://<load-balancer-url>
      ```
    - **Explanation**:
-     - `curl -I`: Fetches HTTP headers from the URL.
+     - `curl -I`: Fetches HTTP headers to verify the response from the load balancer.
 
 ### 4. Set Up Auto Scaling Group
 
@@ -222,9 +229,9 @@ This project involves migrating a multi-tier web application stack (vProfile) fr
 ## Future Improvements
 
 - **CI/CD Integration**: Implement a CI/CD pipeline for automated artifact deployment.
-- **Managed Services**: Consider migrating to AWS managed services like RDS for MySQL, ElastiCache for
+- **Managed Services**: Consider migrating to AWS managed services like RDS for MySQL, ElastiCache for Memcached, and Amazon MQ for RabbitMQ.
 
- Memcached, and Amazon MQ for RabbitMQ.
+ 
 
 ---
 
