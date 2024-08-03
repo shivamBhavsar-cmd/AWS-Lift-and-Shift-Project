@@ -234,5 +234,3 @@ This project involves migrating a multi-tier web application stack (vProfile) fr
  
 
 ---
-
-Feel free to customize this template further based on your specific setup or additional details.
